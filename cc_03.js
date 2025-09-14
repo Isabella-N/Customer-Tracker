@@ -28,7 +28,7 @@ customers.email[1] = "NicTurner@gmail.com"
 customers.forEach(obj => console.log(
     `Name: ${obj.name}`,
     `| Email: ${obj.email}`,
-    `| Purchases: ${obj.purchases.pens} Pens`
+    `| Purchases: ${obj.purchases}`
 ));
 
 //customers.push(customer[0][2][1] = 6)
