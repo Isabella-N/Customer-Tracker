@@ -13,28 +13,30 @@ let customers = [
     purchases: [{pens: 40, notebooks: 20, backpacks: 10}]
 }]
 
-//Adds a new customer (good)
+//Adds a new customer
 customers.push({name: "Han Jisung", 
     email: "HanStrayKidz@gmail.com",
-    purchases: [{pens: 60, notebooks: 5, backpacks: 1}]
+    purchases: [{pens: 60, notebooks: 5}]
 });
 
-//Gets rid of first customer (good)
+//Gets rid of first customer
 my_shift = customers.shift()
 
-//changes the email for Nicoles (good)
+//changes the email for Nicoles
 customers[0].email = "NicTurner@gmail.com"
 
-//change a purchase number
-//customers.push(customer[0][2][1] = 6)
+//Get rid of the old purchase number
+my_shift = customers[2].purchases.shift()
 
-customers.forEach(obj => console.log(
-    `Name: ${obj.name}`,
-    `| Email: ${obj.email}`,
-));
+//Updated purchase number
+customers[2].purchases.push({pens: 60, notebooks: 5, backpacks: 2});
 
-purchases.forEach(obj => console.log(
-    `Pens: ${obj.pens}`,
-    `| Notebooks: ${obj.notebooks}`,
-    `| Backpacks: ${backpacks}`
-));
+customers.forEach(customer => {
+    console.log(`Name: ${customer.name}`, 
+        `| Email: ${customer.email}`);
+
+    customer.purchases.forEach(purchase => {
+        console.log(
+            `   Purchases: ${purchase.pens} Pens, ${purchase.notebooks} Notebooks, and ${purchase.backpacks} Backpacks`)}
+        );
+});
