@@ -17,18 +17,24 @@ let customers = [
 customers.push({name: "Han Jisung", 
     email: "HanStrayKidz@gmail.com",
     purchases: [{pens: 60, notebooks: 5, backpacks: 1}]
-})
+});
 
 //Gets rid of first customer (good)
 my_shift = customers.shift()
 
-//changes the email for Nicoles (not working)
-customers.email[1] = "NicTurner@gmail.com"
+//changes the email for Nicoles (good)
+customers[0].email = "NicTurner@gmail.com"
+
+//change a purchase number
+//customers.push(customer[0][2][1] = 6)
 
 customers.forEach(obj => console.log(
     `Name: ${obj.name}`,
     `| Email: ${obj.email}`,
-    `| Purchases: ${obj.purchases}`
 ));
 
-//customers.push(customer[0][2][1] = 6)
+purchases.forEach(obj => console.log(
+    `Pens: ${obj.pens}`,
+    `| Notebooks: ${obj.notebooks}`,
+    `| Backpacks: ${backpacks}`
+));
